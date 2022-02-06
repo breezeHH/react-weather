@@ -1,0 +1,3 @@
+.CurrentDescription .li:first-letter {
+  text-transform: capitalize;
+}

@@ -1,25 +1,71 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Search from "./Search";
 
-function App() {
+import Forecast from "./Forecast";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="AppWrapper">
+      <div className="App">
+        <div className="Search">
+          <Search />
+        </div>
+        <div className="currentWeather"></div>
+        <div className="weather-forecast">
+          <div className="row">
+            <div className="col-2">
+              <Forecast
+                day="Sun"
+                tempMax={5}
+                tempMin={3}
+                icon={"https://openweathermap.org/img/wn/04d@2x.png"}
+              />
+            </div>
+            <div className="col-2">
+              <Forecast
+                day="Mon"
+                tempMax={6}
+                tempMin={4}
+                icon={"https://openweathermap.org/img/wn/04d@2x.png"}
+              />
+            </div>
+            <div className="col-2">
+              <Forecast
+                day="Tue"
+                tempMax={10}
+                tempMin={6}
+                icon={"https://openweathermap.org/img/wn/01d@2x.png"}
+              />
+            </div>
+            <div className="col-2">
+              <Forecast
+                day="Wed"
+                tempMax={9}
+                tempMin={8}
+                icon={"https://openweathermap.org/img/wn/01d@2x.png"}
+              />
+            </div>
+            <div className="col-2">
+              <Forecast
+                day="Thu"
+                tempMax={7}
+                tempMin={5}
+                icon={"https://openweathermap.org/img/wn/10d@2x.png"}
+              />
+            </div>
+            <div className="col-2">
+              <Forecast
+                day="Fri"
+                tempMax={5}
+                tempMin={3}
+                icon={"https://openweathermap.org/img/wn/04d@2x.png"}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <small>This project was coded by Kathrin.</small>
     </div>
   );
 }
-
-export default App;
