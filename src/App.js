@@ -11,7 +11,7 @@ export default function App() {
         <div className="Search">
           <Search />
         </div>
-        <div className="currentWeather"></div>
+
         <div className="weather-forecast">
           <div className="row">
             <div className="col-2">
@@ -65,7 +65,26 @@ export default function App() {
           </div>
         </div>
       </div>
-      <small>This project was coded by Kathrin.</small>
+      <small>
+        This{" "}
+        <a
+          href="https://github.com/breezeHH/react-weather"
+          target="_blank"
+          rel="noreferrer"
+        >
+          open-source project{" "}
+        </a>
+        was coded by
+        <a
+          href="https://www.linkedin.com/in/kathrin-hesse-0b6215129/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {" "}
+          Kathrin
+        </a>
+        .
+      </small>
     </div>
   );
 }
