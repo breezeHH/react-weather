@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Search.css";
 
-export default function SearchCity() {
-  const [city, setCity] = useState("Hamburg");
+export default function SearchCity(props) {
+  const [city, setCity] = useState(props.city);
   const [loaded, setLoaded] = useState(false);
   const [weather, setWeather] = useState({});
 
   function showWeather(response) {
+    setCity({
+      cityName: response.data.name,
+    });
     setLoaded(true);
     setWeather({
       currentTemp: response.data.main.temp,
@@ -54,7 +57,7 @@ export default function SearchCity() {
       <div className="Search">
         <div className="SearchForm">{form}</div>
         <div className="Overview">
-          <h1>{city}</h1>
+          <h1>{city.cityName}</h1>
           <ul>
             <li>
               Last updated:
